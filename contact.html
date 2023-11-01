@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <link rel="stylesheet" href="contact.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    <input type="checkbox" id="checkbox">
+    <header>
+        <a href="index.html" class="head">Heim</a>
+        <a href="contact.html" class="head">Kontakt</a>
+        <!-- <a href="" class="head">Über uns</a> -->
+        <a href=""><img src="logo.svg"></a>
+        <a href="#" class="mnue" id="mnue"><i class="las la-bars"></i></a>
+    </header>
+    <div class="menue">
+        <a href="index.html">Heim</a>
+        <!-- <a href="">Über uns</a> -->
+        <a href="contact.html">Kontakt</a>
+    </div>
+    <main>
+        <div class="container">
+            <div class="img-contact">
+                <img src="Asset 4.svg" alt="">
+                <h3>phone</h3>
+                <p>054494615241654</p>
+            </div>
+            <form action="">
+                <div class="box-contact">
+                    <h6>Senden Sie uns eine Nachricht</h6>
+                    <h5>Gerne nehmen wir an dieser Stelle Ihre Nachricht entgegen und melden uns bei Ihnen.</h5>
+                    <div class="div-input-contact">
+                        <input type="text" placeholder="Erforderlich!" required>
+                        <label for="">Firma</label>
+                    </div>
+                    <div class="div-input-contact">
+                        <input type="text" placeholder="Erforderlich!" required>
+                        <label for="">die Adresse</label>
+                    </div>
+                    <div class="div-input-contact">
+                        <input type="text" >
+                        <label for="">Firmenname</label>
+                    </div>
+                    <div class="div-input-contact">
+                        <input type="email" placeholder="Erforderlich!" required>
+                        <label for="">E-Mail</label>
+                    </div>
+                    <div class="div-input-contact">
+                        <input type="number" placeholder="Erforderlich!" required>
+                        <label for="">Telefon</label>
+                    </div>
+                    <div class="div-input-contact">
+                        <label for="">Servicetyp</label>
+                        <select name="" id="" required>
+                            <option value="salem">Hotelreinigung (Zimmerreinigung, Küchenreinigung, Hausmeister)</option>
+                            <option value="salem">Schulreinigung (Klassenzimmer, Flure, Badezimmer, Treppen, Aufzüge, Büros)</option>
+                            <option value="salem">Kindergartenreinigung (Klassenzimmer, Flure, Badezimmer, Treppen, Aufzüge, Schreibtische)</option>
+                            <option value="salem">Reinigung von Regierungs- und Firmengebäuden (Flure, Badezimmer, Treppen, Aufzüge, Büros)</option>
+                            <option value="salem">Supermarktreinigung</option>
+                            <option value="salem">Ansonsten</option>
+                        </select>
+                    </div>
+                    <div class="div-input-contact">
+                        <button>send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script>
+        let mnue = document.getElementById("mnue");
+        let checkbox = document.getElementById("checkbox");
+        let body = document.getElementById("body");
+        mnue.onclick = chang;
+        function chang() {
+            if (!checkbox.checked) {
+                body.style.overflow = "hidden";
+            } else {
+                body.style.overflow = "scroll";
+                body.style.overflowX = "hidden";
+            }
+            checkbox.toggleAttribute("checked");
+        }
+    </script>
+</body>
+
+</html>

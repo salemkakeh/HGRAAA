@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@600&family=Caprasimo&family=Inter:wght@300;600;900&family=Phudu:wght@800&display=swap');
+
+*{
+    font-family: 'AR One Sans', sans-serif;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Phudu', cursive; 
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+
+}
+
+header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 80px;
+    box-shadow: 1px 1px 20px #e3e2e2 ; 
+    z-index: 1111;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-color: #b8960b;
+    right: 0;
+    clip-path: polygon(100% 100%,0 0%,100% 0%);
+    transition: .4s;
+}
+
+.menue {
+    position: fixed;
+    /* background-color: #105486; */
+    /* background: linear-gradient(to bottom, #105486 , #fff 200%); */
+    height: 100%;
+    width: 400px;
+    top: 80px;
+    right: 0;
+    transition: .6s;
+    transform: translateX(400px);
+    z-index: 111;
+    backdrop-filter: blur(20px);
+    box-shadow: 1px 10px 10px #e3e2e2;
+}
+
+.menue a {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height: 80px;
+    background-color: #b8960b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+.menue a:nth-child(1) {
+    top: 80px;
+}
+.menue a:nth-child(2) {
+    top: 200px;
+}
+.menue a:nth-child(3) {
+    top: 320px;
+}
+.menue a:nth-child(4) {
+    top: 440px;
+    background-color: #105486;
+}
+header img {
+    position: absolute;
+    width: 200px;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.head {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 20px;
+    color: black;
+    padding: 0PX 10px;
+    font-family: 'AR One Sans', sans-serif;
+    letter-spacing: 0px;
+    overflow: hidden;
+    right: 200px;
+}
+.head::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    background-color: #105486;
+    transform: translateX(-110%);
+    transition: .2s;
+}
+.head:hover::after {
+    transform: translateX(-0%);
+    transition: .4s;
+}
+.head:hover {
+    color: #b8960b;
+}
+header b {
+    font-size: 24px;
+    position: absolute;
+    left: 35%;
+    transform: translateX(-50%);
+    color: #b8960b;
+}
+#checkbox1 {
+    display: none;
+
+}
+#checkbox {
+    display: none;
+}
+
+#checkbox1:checked ~ body {
+    overflow: scroll;
+    /* background-color: #105486; */
+}
+
+
+@media (min-width: 700px) and (max-width:1100px) {
+    .head {
+        display: none;
+    }
+    header b {
+        transform: translateX(-0%);
+        left: 40%;
+    }
+    header i {
+        font-size: 46px;
+        z-index: 111;
+        position: absolute;
+        right: 28px;
+        color: #105486;
+        font-weight: 800;
+    }
+    header img {
+        width: 150px;
+    }
+    header b {
+        left: 40%;
+    }
+    .mnue {
+        position: absolute;
+        top: 20px;
+        /* transform: translateY(-100%); */
+    }
+    #checkbox:checked ~ header::after {
+    transition: .4s;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    #checkbox:checked ~ .menue {
+    transition: 1s;
+    transform: translateX(4px);
+    }
+}
+
+
+@media (min-width: 450px) and (max-width:700px) {
+    .head {
+        display: none;
+    }
+    header b {
+        transform: translateX(-0%);
+        left: 36%;
+        font-size: 20PX;
+    }
+    header img {
+        width: 100px;
+
+    }
+    header::after {
+        width: 90px;
+    }
+    header i {
+        font-size: 40px;
+        z-index: 111;
+        position: absolute;
+        right: 24px;
+        color: #105486;
+        font-weight: 800;
+    }
+    .mnue {
+        position: absolute;
+        top: 20px;
+        /* transform: translateY(-100%); */
+    }
+    #checkbox:checked ~ header::after {
+    transition: .4s;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    #checkbox:checked ~ .menue {
+    transition: 1s;
+    transform: translateX(4px);
+    }
+}
+@media (min-width: 360px) and (max-width:450px) {
+    .head {
+        display: none;
+    }
+    header b {
+        transform: translateX(-0%);
+        left: 34%;
+        font-size: 18PX;
+    }
+    header img {
+        width: 100px;
+        left: 10px;
+
+    }
+    header::after {
+        width: 60px;
+    }
+    header i {
+        font-size: 36px;
+        z-index: 111;
+        position: absolute;
+        right: 10px;
+        color: #105486;
+        font-weight: 800;
+    }
+    .mnue {
+        position: absolute;
+        top: 20px;
+        /* transform: translateY(-100%); */
+    }
+    #checkbox:checked ~ header::after {
+    transition: .4s;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    #checkbox:checked ~ .menue {
+    transition: 1s;
+    transform: translateX(4px);
+    width: 101%;
+    }
+}
+@media (min-width: 0px) and (max-width:360px) {
+    .head {
+        display: none;
+    }
+    header b {
+        transform: translateX(-0%);
+        left: 46%;
+        font-size: 16PX;
+        width: 40px;
+        position: absolute;
+        top: 24px;
+    }
+
+    header::after {
+        width: 60px;
+    }
+    header img {
+        width: 100px;
+        left: 10px;
+    }
+    header i {
+        font-size: 36px;
+        z-index: 111;
+        position: absolute;
+        right: 10px;
+        color: #105486;
+        font-weight: 800;
+    }
+
+    .mnue {
+        position: absolute;
+        top: 20px;
+        /* transform: translateY(-100%); */
+    }
+    #checkbox:checked ~ header::after {
+    transition: .4s;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    #checkbox:checked ~ .menue {
+    transition: 1s;
+    transform: translateX(4px);
+    width: 101%;
+    }
+}
